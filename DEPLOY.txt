@@ -1,0 +1,22 @@
+# JABO deploy pack
+
+## What's inside
+- `apps/web` — Next.js PWA (Vercel)
+- `apps/api` — NestJS API (Render)
+- `docker-compose.yml` — PostGIS for local Postgres
+- Official logo: `apps/web/public/brand/jabo-logo.png`
+
+## Fast local start
+1. Install Node.js 22+, Docker Desktop, Git
+2. `docker compose up -d postgres`
+3. `cd apps/api && copy .env.example .env && npm install && npm run db:setup && npm run start:dev`
+4. New terminal: `cd apps/web && copy .env.example .env.local && npm install && npm run dev`
+5. Open http://localhost:3000
+
+Admin: admin@jabo.app / Admin1234!
+Demo: demo@jabo.app / Demo1234!
+
+No paid API keys required.
+
+## Cloud
+See README.md (Neon + Render + Vercel).
